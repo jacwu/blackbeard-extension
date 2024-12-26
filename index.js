@@ -18,6 +18,8 @@ app.post("/", express.json(), async (req, res) => {
   // Parse the request payload and log it.
   const payload = req.body;
   console.log("Payload:", payload);
+  
+  console.log("Data:", payload.messages[payload.messages.length - 1].copilot_references);
 
   // Insert a special pirate-y system message in our message list.
   const messages = payload.messages;
